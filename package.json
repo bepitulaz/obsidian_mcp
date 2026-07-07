@@ -1,0 +1,49 @@
+{
+  "name": "obsidian-multivault-mcp",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Multi-vault, multi-user MCP server giving Claude read/write access to Obsidian vaults on a VPS — over ssh stdio and an OAuth-protected HTTP transport, where each user's login routes to their own vault.",
+  "license": "MIT",
+  "author": "Asep Bagja Priandana <bepitulaz@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bepitulaz/obsidian-multivault-mcp.git"
+  },
+  "homepage": "https://github.com/bepitulaz/obsidian-multivault-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/bepitulaz/obsidian-multivault-mcp/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "obsidian",
+    "claude",
+    "oauth",
+    "multi-vault"
+  ],
+  "bin": {
+    "obsidian-multivault-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "node esbuild.config.mjs",
+    "watch": "node esbuild.config.mjs --watch",
+    "typecheck": "tsc --noEmit",
+    "smoke": "node scripts/smoke.mjs",
+    "smoke:http": "node scripts/smoke-http.mjs",
+    "inspect": "npx @modelcontextprotocol/inspector node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "cors": "^2.8.5",
+    "express": "^5.0.0",
+    "jose": "^6.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.0",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.6.0"
+  }
+}

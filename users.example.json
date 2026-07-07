@@ -1,0 +1,15 @@
+{
+  "_comment": "Copy to a private, mode-600 file (e.g. /etc/obsidian-multivault-mcp-users.json) and point MCP_USERS_FILE at it. One entry per person. Each passphrase MUST be strong and DISTINCT — it is that person's entire login and it decides which vault they get. Optional per-user keys: \"readOnly\": true, \"ext\": [\".md\", \".canvas\"].",
+  "users": [
+    {
+      "id": "alice",
+      "passphrase": "REPLACE-with-a-long-passphrase-for-alice",
+      "vault": "/home/youruser/alice-vault"
+    },
+    {
+      "id": "bob",
+      "passphrase": "REPLACE-with-a-DIFFERENT-long-passphrase",
+      "vault": "/home/youruser/bob-vault"
+    }
+  ]
+}
